@@ -1,18 +1,21 @@
 import React from 'react';
 import '../assets/css/styles.css';
 
+import LookingFor from './LookingFor';
+import Transmit from './Transmit';
+
 import burger from '../assets/images/menu.png';
 
 function Home() {
     return (
         <div className="home-page">
             <div className="home-topbar">
-                <div className="home-topbar-looking">
+                <a href="#lookingfor" className="home-topbar-button home-topbar-looking">
                     <p>Recherche</p>
-                </div>
-                <div className="home-topbar-transmit">
+                </a>
+                <a href="#transmit" className="home-topbar-button home-topbar-transmit">
                     <p>Proposition</p>
-                </div>
+                </a>
                 <div className="burger-menu">
                     <img id="burger-up" src={burger} alt="icon-menu-burger" />
                     <img id="burger-down" src={burger} alt="icon-menu-burger" />
@@ -25,8 +28,14 @@ function Home() {
                     <li> <a class="li-navMobile" href="#disconnect"> Déconnexion </a> </li>
                  </ul>
                 </div>
-            </div>    
-        </div>    
+            </div>
+            <div className="home-container home-container-looking" id="lookingfor">
+                <LookingFor />
+            </div>
+            <div className="home-container home-container-transmit" id="transmit">
+                <Transmit />
+            </div>
+        </div>
     )
 }
 
