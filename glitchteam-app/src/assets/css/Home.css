@@ -1,3 +1,14 @@
-.home-page {
-    background-color: red;
+.home-topbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-topbar-looking {
+    padding:  calc(var(--spacing)*2);
+    background-color: var(--search-color);
+}
+
+.home-topbar-transmit {
+    padding:  calc(var(--spacing)*2);
+    background-color: var(--transmit-color);
 }
