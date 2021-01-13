@@ -52,6 +52,7 @@ const Button = styled.button`
   border-radius: 10px;
   color: #46516e;
   font-size: 17px;
+  cursor:pointer;
 `;
 
 const Form = styled.form`
