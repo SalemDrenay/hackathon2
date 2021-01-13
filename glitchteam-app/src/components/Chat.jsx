@@ -96,6 +96,8 @@ const Chat = () => {
   const [message, setMessage] = useState("");
 
   const socketRef = useRef();
+  const countRef = useRef();
+  countRef.current = -1;
 
   useEffect(() => {
     socketRef.current = io.connect("http://localhost:8000/");
@@ -105,7 +107,12 @@ const Chat = () => {
     });
 
     socketRef.current.on("message", (message) => {
-      receivedMessage(message);
+      if (message.msgId <= countRef.current)
+        return console.log(
+          `Avoiding message ${message.msg} (${message.msgId})`
+        );
+      countRef.current = message.msgId;
+      receivedMessage(message.msg);
     });
   }, []);
 
@@ -149,7 +156,8 @@ const Chat = () => {
         <TextArea
           value={message}
           onChange={handleChange}
-          placeholder='Envoyer votre Message'
+          onKeyPress={(e) => (e.key === "Enter" ? sendMessage(e) : null)}
+          placeholder='Envoyer un message'
           required
         />
         <Button>Envoyer</Button>

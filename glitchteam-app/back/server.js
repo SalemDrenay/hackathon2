@@ -10,13 +10,16 @@ const io = socket(server, {
   },
 });
 
+var number = 0;
+
 app.get("/", (req, res) => {
   res.send("<h1>Hellow World</h1>");
 });
+
 io.on("connection", (socket) => {
   socket.emit("your id", socket.id);
   socket.on("send message", (body) => {
-    io.emit("message", body);
+    io.emit("message", { msg: body, msgId: ++number });
   });
 });
 server.listen(8000, () => {
