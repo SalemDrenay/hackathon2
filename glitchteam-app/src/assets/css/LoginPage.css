@@ -1,0 +1,48 @@
+/* .LogInPage{
+    flex-direction: column;
+    justify-content: center;
+} */
+.NoAccount{
+    display: flex;
+    justify-content: flex-end;
+}
+.NoAccount button {
+    display: flex;
+    justify-content: flex-end;
+    color:rgb(71, 67, 61);
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  margin: var(--spacing);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+
+.IdArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.PasswordArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.IdButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color:rgb(71, 67, 61);
+    padding: var(--spacing) calc(var(--spacing) * 2);
+    margin: var(--spacing);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
