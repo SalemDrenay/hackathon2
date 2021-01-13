@@ -2,6 +2,20 @@
     padding: calc(var(--spacing)*4) calc(var(--spacing)*2);
 }
 
+.home-page-validate {
+    border: none;
+    background-color: #17001b;
+    margin: var(--spacing);
+    padding:  calc(var(--spacing)*2);
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--light-true);
+    font-size: 1.1rem;
+}
+
+/*  TOPBAR */
+
 .home-topbar {
     display: flex;
     justify-content: space-around;
@@ -32,6 +46,12 @@
     border-radius: 24px;
     margin-bottom: calc(var(--spacing)*4);
     padding: calc(var(--spacing)*4) calc(var(--spacing)*2);
+    display: flex;
+    justify-content: center;
+}
+
+.home-container h2 {
+    margin-bottom: calc(var(--spacing)*3);
 }
 
 .home-container-looking {
@@ -42,6 +62,46 @@
     background-color: var(--transmit-color);
 }
 
+.home-looking, .home-transmit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-bottom: calc(var(--spacing)*2);
+}
+
+.home-form-select {
+    width: 100%;
+    margin-bottom: var(--spacing);
+}
+
+.home-filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter-card {
+    width: 45%;
+    text-align: center;
+    height: 156px;
+    background-color: hsl(219, 79%, 66%);
+    margin: calc(var(--spacing)*2) 0;
+    border-radius: 24px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* BUREAU */
 
 @media screen and (min-width: 768px) {
@@ -50,5 +110,17 @@
         width: 40%;
         font-size: 1.5rem;
         border-radius: 40px;
+    }
+
+    .home-form-select {
+        width: 80%;
+    }
+
+    .filter-card {
+        width: 28%;
+        height: 200px;
+        font-size: 1.3rem;
+        padding: calc(var(--spacing)*2);
+        margin: calc(var(--spacing)*2) var(--spacing);
     }
 }
