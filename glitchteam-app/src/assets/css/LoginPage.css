@@ -1,48 +1,101 @@
-/* .LogInPage{
+.login-page {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.logo-container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
     justify-content: center;
-} */
-.NoAccount{
-    display: flex;
-    justify-content: flex-end;
-}
-.NoAccount button {
-    display: flex;
-    justify-content: flex-end;
-    color:rgb(71, 67, 61);
-  padding: var(--spacing) calc(var(--spacing) * 2);
-  margin: var(--spacing);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} 
-
-
-.IdArea {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+    align-items: center;
 }
 
-.PasswordArea {
+.logo-braincubator {
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* FORM */
+
+.login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.login-inputs {
+    width: 70%;
+    margin: var(--spacing);
+    padding: var(--spacing) calc(var(--spacing)*2);
+    height: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(129, 129, 129);
+}
+
+.login-inputs:focus {
+    outline: none;
 }
 
 .IdButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color:hsl(104, 100%, 30%);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing)*1);
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.IdButton:focus {
+    outline: none;
+}
+
+/* PAS DE COMPTE */
+
+.NoAccount{
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    
-    color:rgb(71, 67, 61);
+    width: 100%;
+}
+
+.NoAccount p {
+    color:hsl(39, 6%, 43%);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.NoAccount button {
+    display: flex;
+    justify-content: flex-end;
+    background-color: hsl(189, 3%, 42%);
+    color: var(--light-true);
+    font-weight: bold;
     padding: var(--spacing) calc(var(--spacing) * 2);
-    margin: var(--spacing);
+    margin: var(--spacing) calc(var(--spacing) * 2);
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
+}
+
+.NoAccount button:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-braincubator {
+        max-width: 1000px;
+    }
+
+    .login-inputs {
+        width: 50%;
+    }
 }
