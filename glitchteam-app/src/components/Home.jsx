@@ -4,18 +4,13 @@ import '../assets/css/styles.css';
 import LookingFor from './LookingFor';
 import Transmit from './Transmit';
 
-import burger from '../assets/images/menu.png';
+import logo from '../assets/images/logo.png';
 
 function Home() {
     return (
         <div className="home-page">
             <div className="home-topbar">
-                <a href="#lookingfor" className="home-topbar-button home-topbar-looking">
-                    <p>Recherche</p>
-                </a>
-                <a href="#transmit" className="home-topbar-button home-topbar-transmit">
-                    <p>Proposition</p>
-                </a>
+                <img src={logo} alt="logo de Braincubator" className="topbar-logo"/>
                 <nav role="navigation">
                     <div id="menu-toggle">
                         <input type="checkbox" />

@@ -1,10 +1,12 @@
 import "../assets/css/LoginPage.css";
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo-typo.png';
+import brain from '../assets/images/logo-brain.png';
 
 function LoginPage() {
   return (
     <div className="login-page">
       <div className="logo-container">
+        <img src={brain} alt="logo de Braincubator" className="logo-brain" />
         <img src={logo} alt="logo de Braincubator" className="logo-braincubator" />
       </div>
       <form className="login-form">
