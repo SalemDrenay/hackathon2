@@ -25,15 +25,15 @@ function Transmit() {const options = [
                 <input type="submit" value="Envoyer" className="home-page-validate" />
             </form>
             <div className="home-filters">
-                <Link to={`/home`} className="filter-card filter-mecanique">
+                <Link to={`/join`} className="filter-card filter-mecanique">
                     <h3>Mécanique</h3>
                 </Link>
-                <Link to={`/home`} className="filter-card filter-musique">
+                <Link to={`/join`} className="filter-card filter-musique">
                     <h3>Musique</h3>
-                </Link><Link to={`/home`} className="filter-card filter-maison">
+                </Link><Link to={`/join`} className="filter-card filter-maison">
                     <h3>Maison</h3>
                 </Link>
-                <Link to={`/home`} className="filter-card filter-animaux">
+                <Link to={`/join`} className="filter-card filter-animaux">
                     <h3>Animaux</h3>
                 </Link>
             </div>

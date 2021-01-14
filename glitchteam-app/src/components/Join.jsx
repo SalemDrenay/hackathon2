@@ -18,6 +18,9 @@ const JoinInnerContainer = styled.div`
     display : flex;
     flex-direction: column;
     justify-content : space-between;
+    @media (max-width : 990Px){
+        width:70%;
+    }
 `;
 
 const Heading = styled.div`
@@ -30,7 +33,10 @@ const Heading = styled.div`
 const JoinInput = styled.input`
     border-radius: 5px;
     padding: 15px 20px;
-    width: 90%;    
+    width: 89%; 
+    @media (max-width : 990Px){
+        width:85%;
+    }   
 `;
 
 const Button = styled.button`
@@ -53,7 +59,7 @@ const Join = () =>{
         <JoinInnerContainer>
          <Heading><h3>Bienvenue !</h3></Heading>
            <JoinInput placeholder="Pseudo" type="text" onChange={(event) => setName(event.target.value)} />
-            <JoinInput placeholder="Salon" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+            <JoinInput placeholder="Confirmez votre Salon !" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
           <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
             <Button className={'button mt-20'} type="submit">Se connecter au salon</Button>
           </Link>

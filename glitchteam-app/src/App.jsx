@@ -12,7 +12,7 @@ import Chat from "./components/Chat";
 function App() {
   return  (
     <Router>
-      <div>
+      <div className="App">
         <Switch>
           <Route exact path="/login">
             <LoginPage />

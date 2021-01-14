@@ -106,6 +106,7 @@ const PartnerMessage = styled.div`
 
 
 
+
 const Chat = ({ location }) => {
   const [yourId, setYourId] = useState();
   const [messages, setMessages] = useState([]);
@@ -189,6 +190,7 @@ const Chat = ({ location }) => {
           return (
             <PartnerRow key={index}>
               <PartnerMessage>{message.body}</PartnerMessage>
+              
             </PartnerRow>
           );
         })}
