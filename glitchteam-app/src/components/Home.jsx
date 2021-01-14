@@ -16,18 +16,20 @@ function Home() {
                 <a href="#transmit" className="home-topbar-button home-topbar-transmit">
                     <p>Proposition</p>
                 </a>
-                <div className="burger-menu">
-                    <img id="burger-up" src={burger} alt="icon-menu-burger" />
-                    <img id="burger-down" src={burger} alt="icon-menu-burger" />
-                </div>
+                <nav role="navigation">
+                    <div id="menu-toggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-                <div id="contentMobile">
-                  <ul id="sommaireMobile"> 
-                    <li> <a class="li-navMobile" href="#lookingfor"> Je recherche  </a> </li>
-                    <li> <a class="li-navMobile" href="#transmit"> Je transmets </a> </li>
-                    <li> <a class="li-navMobile" href="#disconnect"> Déconnexion </a> </li>
-                 </ul>
-                </div>
+                        <ul id="menu">
+                            <a href="http://localhost:3000/login">
+                                <li>Déconnexion</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
             </div>
             <div className="home-container home-container-looking" id="lookingfor">
                 <LookingFor />
