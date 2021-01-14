@@ -1,4 +1,3 @@
-import react from "react";
 import "../assets/css/LoginPage.css";
 import logo from '../assets/images/logo.png'
 
