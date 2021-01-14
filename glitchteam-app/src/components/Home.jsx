@@ -22,7 +22,7 @@ function Home() {
                         <span></span>
                         <span></span>
                         <span></span>
-
+                      
                         <ul id="menu">
                             <a href="http://localhost:3000/login">
                                 <li>Déconnexion</li>
@@ -30,6 +30,14 @@ function Home() {
                         </ul>
                     </div>
                 </nav>
+            </div>
+            <div className="home-Search">
+            <a href="#lookingfor" className="home-topbar-button home-topbar-looking">
+                    <p>Recherche</p>
+                </a>
+                <a href="#transmit" className="home-topbar-button home-topbar-transmit">
+                    <p>Proposition</p>
+                </a>
             </div>
             <div className="home-container home-container-looking" id="lookingfor">
                 <LookingFor />

@@ -22,19 +22,21 @@ function LookingFor() {const options = [
             <h2>Je recherche</h2>
             <form className="home-form">
                 <Select options={options} placeholder="Spécialités" className="home-form-select" />
+                <Link to={`/join`}>
                 <input type="submit" value="Envoyer" className="home-page-validate" />
+                </Link>
             </form>
             <div className="home-filters">
-                <Link to={`/home`} className="filter-card filter-art">
+                <Link to={`/join`} className="filter-card filter-art">
                     <h3>Arts plastiques</h3>
                 </Link>
-                <Link to={`/home`} className="filter-card filter-cuisine">
+                <Link to={`/join`} className="filter-card filter-cuisine">
                     <h3>Cuisine</h3>
                 </Link>
-                <Link to={`/home`} className="filter-card filter-animaux">
+                <Link to={`/join`} className="filter-card filter-animaux">
                     <h3>Animaux</h3>
                 </Link>
-                <Link to={`/home`} className="filter-card filter-bricolage">
+                <Link to={`/join`} className="filter-card filter-bricolage">
                     <h3>Bricolage</h3>
                 </Link>
             </div>
