@@ -6,17 +6,63 @@
     min-height: 100vh;
 }
 
+/* LOGO */
+
 .logo-container {
     height: 50vh;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .logo-braincubator {
-    height: 100%;
+    width: 100%;
     margin: 0 auto;
+    z-index: 1;
+}
+
+.logo-brain {
+    z-index: 2;
+    width: 15%;
+    position: absolute;
+    right: 8%;
+    margin-bottom: 15px;
+    -webkit-animation: rotating 4s linear infinite;
+    -moz-animation: rotating 4s linear infinite;
+    -ms-animation: rotating 4s linear infinite;
+    -o-animation: rotating 4s linear infinite;
+    animation: rotating 4s linear infinite;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 /* FORM */
@@ -97,5 +143,13 @@
 
     .login-inputs {
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo-brain {
+        width: 13%;
+        right: 14%;
+        margin-bottom: 40px;
     }
 }
