@@ -1,0 +1,27 @@
+const express = require("express");
+const http = require("http");
+const app = express();
+const server = http.createServer(app);
+const socket = require("socket.io");
+const io = socket(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
+
+var number = 0;
+
+app.get("/", (req, res) => {
+  res.send("<h1>Hellow World</h1>");
+});
+
+io.on("connection", (socket) => {
+  socket.emit("your id", socket.id);
+  socket.on("send message", (body) => {
+    io.emit("message", { msg: body, msgId: ++number });
+  });
+});
+server.listen(8000, () => {
+  console.log("server is running on port 8000");
+});

@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import LoginPage from "./components/LoginPage";
+import Join from "./components/Join";
+import Chat from "./components/Chat";
 
 function App() {
   return  (
@@ -18,6 +20,8 @@ function App() {
           <Route exact path="/home">
             <Home />
           </Route>
+          <Route path="/join" component={Join} />
+          <Route path="/chat" component={Chat} />
         </Switch>
       </div>
     </Router>
