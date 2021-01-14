@@ -1,5 +1,6 @@
 :root {
     --spacing: 8px;
+    --light-true: #ffffff;
     --search-color: #710099;
     --transmit-color: #B20081;
 }
@@ -18,6 +19,16 @@ body,
 #root {
     display: flex;
     flex-direction: column;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--light-true);
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-true);
 }
 
 /* menu burger */
