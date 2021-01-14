@@ -32,7 +32,8 @@ function LookingFor() {const options = [
                 </Link>
                 <Link to={`/join`} className="filter-card filter-cuisine">
                     <h3>Cuisine</h3>
-                </Link><Link to={`/join`} className="filter-card filter-animaux">
+                </Link>
+                <Link to={`/join`} className="filter-card filter-animaux">
                     <h3>Animaux</h3>
                 </Link>
                 <Link to={`/join`} className="filter-card filter-bricolage">
