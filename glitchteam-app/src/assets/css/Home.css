@@ -25,6 +25,10 @@
     margin-top:5px;
 }
 
+.topbar-logo {
+    max-height: 25px;
+}
+
 .home-topbar-button {
     margin: var(--spacing);
     padding:  calc(var(--spacing)*2);
