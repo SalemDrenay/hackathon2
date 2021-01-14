@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
+import queryString from 'query-string';
 import styled from "styled-components";
 
 const Page = styled.div`
@@ -7,13 +8,19 @@ const Page = styled.div`
   height: 100vh;
   width: 100%;
   align-items: center;
-  background-color: #333;
+  background-color: #710099;
   flex-direction: column;
+`;
+
+const Title = styled.div`
+  width:400px;
+  color:white;
+  text-align:center;
 `;
 
 const Container = styled.div`
   display: flex;
-  background-color: black;
+  background-color: white;
   flex-direction: column;
   height: 500px;
   max-height: 500px;
@@ -26,8 +33,8 @@ const Container = styled.div`
 `;
 
 const TextArea = styled.textarea`
-  width: 98%;
-  background-color: black;
+  width: 96.5%;
+  background-color: white;
   height: 100px;
   border-radius: 10px;
   margin-top: 10px;
@@ -36,23 +43,26 @@ const TextArea = styled.textarea`
   font-size: 17px;
   border: 1px solid #ffff;
   outline: none;
-  color: lightgray;
+  color: #black;
   letter-spacing: 1px;
   line-height: 20px;
   ::placeholder {
-    color: lightgray;
+    color: #710099;
   }
 `;
 
 const Button = styled.button`
-  background-color: #ffff;
+  background-color: #B20081;
   width: 100%;
   border: none;
   height: 50px;
   border-radius: 10px;
-  color: #46516e;
+  color: white;
   font-size: 17px;
   cursor:pointer;
+    :hover {
+    background-color : #B08DAA
+  }
 `;
 
 const Form = styled.form`
@@ -68,7 +78,7 @@ const MyRow = styled.div`
 
 const MyMessage = styled.div`
   width: 45%;
-  background-color: #077dfb;
+  background-color: #B20081;
   color: #ffff;
   padding: 10px;
   margin-right: 5px;
@@ -78,11 +88,13 @@ const MyMessage = styled.div`
 
 const PartnerRow = styled(MyRow)`
   justify-content: flex-start;
+  display:flex;
+  flex-direction: column;
 `;
 
 const PartnerMessage = styled.div`
   width: 45%;
-  background-color: white;
+  background-color: lightgrey ;
   color: black;
   border: 1px solid lightgray;
   padding: 10px;
@@ -91,14 +103,43 @@ const PartnerMessage = styled.div`
   border-radius: 30px;
 `;
 
-const Chat = () => {
+const MessageName = styled.div`
+  color: #B08DAA;
+  padding: 10px;
+  margin-left: 5px;
+`;
+
+
+
+const Chat = ({ location }) => {
   const [yourId, setYourId] = useState();
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
+  const [room , setRoom] = useState("");
+  const [name , setName] = useState("")
+  const ENDPOINT = "http://localhost:3000/"
 
   const socketRef = useRef();
   const countRef = useRef();
   countRef.current = -1;
+
+
+  useEffect(()=>{
+    const { name, room } = queryString.parse(location.search);
+
+    const socket = io(ENDPOINT)
+
+    setRoom(room);
+    setName(name)
+
+    socket.emit('join', { name, room }, (error) => {
+      if(error) {
+        alert(error);
+      }
+    });
+  },[ENDPOINT, location.search])
+
+  console.log(room , name)
 
   useEffect(() => {
     socketRef.current = io.connect("http://localhost:8000/");
@@ -115,6 +156,7 @@ const Chat = () => {
       countRef.current = message.msgId;
       receivedMessage(message.msg);
     });
+
   }, []);
 
   const receivedMessage = (message) => {
@@ -137,6 +179,9 @@ const Chat = () => {
 
   return (
     <Page>
+      <Title>
+        <h1>Bienvenue {name} <br/> sur la room {room}</h1>
+      </Title>
       <Container>
         {messages.map((message, index) => {
           if (message.id === yourId) {
@@ -148,7 +193,9 @@ const Chat = () => {
           }
           return (
             <PartnerRow key={index}>
+              <MessageName>{name} :</MessageName>
               <PartnerMessage>{message.body}</PartnerMessage>
+              
             </PartnerRow>
           );
         })}
@@ -161,7 +208,7 @@ const Chat = () => {
           placeholder='Envoyer un message'
           required
         />
-        <Button>Envoyer</Button>
+        <Button>ENVOYER</Button>
       </Form>
     </Page>
   );
