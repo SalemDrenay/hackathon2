@@ -1,0 +1,44 @@
+import React from 'react';
+import Select from 'react-select';
+import { Link } from 'react-router-dom';
+import '../assets/css/styles.css';
+
+function Transmit() {const options = [
+        { value: 'animaux', label: 'Animaux' },
+        { value: 'artsplastiques', label: 'Arts plastiques' },
+        { value: 'bienetre', label: 'Bien-être' },
+        { value: 'bricolage', label: 'Bricolage' },
+        { value: 'cuisine', label: 'Cuisine' },
+        { value: 'informatique', label: 'Informatique' },
+        { value: 'jardinage', label: 'Jardinage' },
+        { value: 'decoration', label: 'Décoration' },
+        { value: 'mecanique', label: 'Mécanique' },
+        { value: 'musique', label: 'Musique' },
+        { value: 'soutien', label: 'Soutien scolaire' }
+    ]
+
+    return (
+        <div className="home-transmit">
+            <h2>Je transmets</h2>
+            <form className="home-form">
+                <Select options={options} placeholder="Spécialités" className="home-form-select" />
+                <input type="submit" value="Envoyer" className="home-page-validate" />
+            </form>
+            <div className="home-filters">
+                <Link to={`/join`} className="filter-card filter-mecanique">
+                    <h3>Mécanique</h3>
+                </Link>
+                <Link to={`/join`} className="filter-card filter-musique">
+                    <h3>Musique</h3>
+                </Link><Link to={`/join`} className="filter-card filter-maison">
+                    <h3>Décoration</h3>
+                </Link>
+                <Link to={`/join`} className="filter-card filter-animaux">
+                    <h3>Animaux</h3>
+                </Link>
+            </div>
+        </div>    
+    )
+}
+
+export default Transmit;

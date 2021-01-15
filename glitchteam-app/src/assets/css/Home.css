@@ -1,0 +1,194 @@
+.home-page {
+    width: 100%;
+    margin: auto;
+}
+
+.home-page-validate {
+    border: none;
+    background-color: #17001b;
+    margin: var(--spacing);
+    padding:  calc(var(--spacing)*2);
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--light-true);
+    font-size: 1.1rem;
+}
+
+/*  TOPBAR */
+
+.home-topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    margin-right: 35px;
+    margin-top: 5px;
+    margin-bottom: var(--spacing);
+}
+
+.topbar-logo {
+    max-height: 30px;
+    position: absolute;
+    left: 20px;
+}
+
+.home-topbar-button {
+    margin: var(--spacing);
+    padding:  calc(var(--spacing)*2);
+    min-width: 104px;
+    width: 25%;
+    border-radius: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.home-topbar-looking {
+    background-color: #6494ED;
+}
+
+.home-topbar-transmit {
+    background-color: var(--transmit-color);
+}
+
+/* Home SEARCH */
+
+.home-Search{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*SECTIONS */
+
+.home-container {
+    border-radius: 10px;
+    margin-bottom: calc(var(--spacing)*4);
+    padding: calc(var(--spacing)*4) calc(var(--spacing)*2);
+    display: flex;
+    justify-content: center;
+}
+
+.home-container h2 {
+    margin-bottom: calc(var(--spacing)*3);
+}
+
+
+.home-container-transmit {
+    background-color: var(--transmit-color);
+}
+
+.home-looking, .home-transmit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-bottom: calc(var(--spacing)*2);
+}
+
+.home-form-select {
+    width: 100%;
+    margin-bottom: var(--spacing);
+}
+
+.home-filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter-card {
+    width: 45%;
+    text-align: center;
+    height: 156px;
+    background-color: hsl(219, 79%, 66%);
+    margin: calc(var(--spacing)*2) 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-filters h3 {
+    color:white;
+    font-weight: bold;
+}
+.home-filters .filter-art{
+    background-size: cover;
+     background-image: url("https://www.superprof.fr/ressources/wp-content/uploads/2010/04/vocabulaire-creation-art-1200x872.jpg");
+     background-blend-mode: multiply;
+    background-color: #969297;
+}
+
+.home-filters .filter-cuisine{
+    background-image: url("https://gourmand.viepratique.fr/wp-content/uploads/sites/2/2014/02/156206-491x410.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-animaux{
+    background-image: url("https://journalmetro.com/wp-content/uploads/2013/03/vert-pandas_c100.jpg?w=860");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-bricolage{
+    background-image: url("https://photos.lci.fr/images/613/344/do-it-yourself-nos-5-espaces-incontournables-732be6-0@1x.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-mecanique{
+    background-image: url("https://images.caradisiac.com/images/8/9/2/3/38923/S0-Les-cles-de-l-entretien-mecanique-les-astuces-et-conseils-de-Caradisiac-624217.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-musique{
+    background-image: url("https://www.presse-citron.net/app/uploads/2019/03/myspace-musique.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-maison{
+    background-image: url("https://www.photoweb.fr/espaces/magazine/wp-content/uploads/sites/3/2018/09/decoration-murale-tableau.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+
+/* BUREAU */
+
+@media screen and (min-width: 768px) {
+
+    .home-page{
+        width: 50%;
+    }
+
+    .home-topbar-button {
+        width: 40%;
+        font-size: 1.5rem;
+        border-radius: 40px;
+    }
+
+    .home-form-select {
+        width: 80%;
+    }
+
+    .filter-card {
+        width: 28%;
+        height: 200px;
+        font-size: 1.3rem;
+        padding: calc(var(--spacing)*2);
+        margin: calc(var(--spacing)*2) var(--spacing);
+    }
+}
