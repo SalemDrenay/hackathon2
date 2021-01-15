@@ -4,24 +4,27 @@ import '../assets/css/styles.css';
 import LookingFor from './LookingFor';
 import Transmit from './Transmit';
 
-import burger from '../assets/images/menu.png';
+import logo from '../assets/images/logo.png';
 
 function Home() {
     return (
         <div className="home-page">
             <div className="home-topbar">
-                <div className="burger-menu">
-                    <img id="burger-up" src={burger} alt="icon-menu-burger" />
-                    <img id="burger-down" src={burger} alt="icon-menu-burger" />
-                </div>
-
-                <div id="contentMobile">
-                  <ul id="sommaireMobile"> 
-                    <li> <a class="li-navMobile" href="#lookingfor"> Je recherche  </a> </li>
-                    <li> <a class="li-navMobile" href="#transmit"> Je transmets </a> </li>
-                    <li> <a class="li-navMobile" href="#disconnect"> Déconnexion </a> </li>
-                 </ul>
-                </div>
+                <img src={logo} alt="logo de Braincubator" className="topbar-logo"/>
+                <nav role="navigation">
+                    <div id="menu-toggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      
+                        <ul id="menu">
+                            <a href="http://localhost:3000/login">
+                                <li>Déconnexion</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
             </div>
             <div className="home-Search">
             <a href="#lookingfor" className="home-topbar-button home-topbar-looking">

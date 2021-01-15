@@ -20,9 +20,17 @@
 .home-topbar {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     height: 30px;
     margin-right: 35px;
-    margin-top:5px;
+    margin-top: 5px;
+    margin-bottom: var(--spacing);
+}
+
+.topbar-logo {
+    max-height: 30px;
+    position: absolute;
+    left: 20px;
 }
 
 .home-topbar-button {
