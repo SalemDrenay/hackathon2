@@ -1,0 +1,155 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+/* LOGO */
+
+.logo-container {
+    height: 50vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-braincubator {
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.logo-brain {
+    z-index: 2;
+    width: 15%;
+    position: absolute;
+    right: 8%;
+    margin-bottom: 15px;
+    -webkit-animation: rotating 4s linear infinite;
+    -moz-animation: rotating 4s linear infinite;
+    -ms-animation: rotating 4s linear infinite;
+    -o-animation: rotating 4s linear infinite;
+    animation: rotating 4s linear infinite;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* FORM */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-inputs {
+    width: 70%;
+    margin: var(--spacing);
+    padding: var(--spacing) calc(var(--spacing)*2);
+    height: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(129, 129, 129);
+}
+
+.login-inputs:focus {
+    outline: none;
+}
+
+.IdButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--transmit-color);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing)*1);
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.IdButton:focus {
+    outline: none;
+}
+
+/* PAS DE COMPTE */
+
+.NoAccount{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.NoAccount p {
+    color:hsl(39, 6%, 43%);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.NoAccount button {
+    display: flex;
+    justify-content: flex-end;
+    background-color: hsl(189, 3%, 42%);
+    color: var(--light-true);
+    font-weight: bold;
+    padding: var(--spacing) calc(var(--spacing) * 2);
+    margin: var(--spacing) calc(var(--spacing) * 2);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.NoAccount button:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-braincubator {
+        max-width: 1000px;
+    }
+
+    .login-inputs {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo-brain {
+        width: 13%;
+        right: 14%;
+        margin-bottom: 40px;
+    }
+}
