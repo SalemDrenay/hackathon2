@@ -118,13 +118,60 @@
     justify-content: center;
     align-items: center;
 }
+.home-filters h3 {
+    color:white;
+    font-weight: bold;
+}
+.home-filters .filter-art{
+    background-size: cover;
+     background-image: url("https://www.superprof.fr/ressources/wp-content/uploads/2010/04/vocabulaire-creation-art-1200x872.jpg");
+     background-blend-mode: multiply;
+    background-color: #969297;
+}
+
+.home-filters .filter-cuisine{
+    background-image: url("https://gourmand.viepratique.fr/wp-content/uploads/sites/2/2014/02/156206-491x410.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-animaux{
+    background-image: url("https://journalmetro.com/wp-content/uploads/2013/03/vert-pandas_c100.jpg?w=860");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-bricolage{
+    background-image: url("https://photos.lci.fr/images/613/344/do-it-yourself-nos-5-espaces-incontournables-732be6-0@1x.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-mecanique{
+    background-image: url("https://images.caradisiac.com/images/8/9/2/3/38923/S0-Les-cles-de-l-entretien-mecanique-les-astuces-et-conseils-de-Caradisiac-624217.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-musique{
+    background-image: url("https://www.presse-citron.net/app/uploads/2019/03/myspace-musique.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
+.home-filters .filter-maison{
+    background-image: url("https://www.photoweb.fr/espaces/magazine/wp-content/uploads/sites/3/2018/09/decoration-murale-tableau.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #969297;
+}
 
 /* BUREAU */
 
 @media screen and (min-width: 768px) {
 
     .home-page{
-        width: 70%;
+        width: 50%;
     }
 
     .home-topbar-button {

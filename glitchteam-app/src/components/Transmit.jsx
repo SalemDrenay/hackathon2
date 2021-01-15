@@ -11,7 +11,7 @@ function Transmit() {const options = [
         { value: 'cuisine', label: 'Cuisine' },
         { value: 'informatique', label: 'Informatique' },
         { value: 'jardinage', label: 'Jardinage' },
-        { value: 'maison', label: 'Maison' },
+        { value: 'decoration', label: 'Décoration' },
         { value: 'mecanique', label: 'Mécanique' },
         { value: 'musique', label: 'Musique' },
         { value: 'soutien', label: 'Soutien scolaire' }
@@ -31,7 +31,7 @@ function Transmit() {const options = [
                 <Link to={`/join`} className="filter-card filter-musique">
                     <h3>Musique</h3>
                 </Link><Link to={`/join`} className="filter-card filter-maison">
-                    <h3>Maison</h3>
+                    <h3>Décoration</h3>
                 </Link>
                 <Link to={`/join`} className="filter-card filter-animaux">
                     <h3>Animaux</h3>
