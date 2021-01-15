@@ -19,7 +19,7 @@ function Home() {
                         <span></span>
                       
                         <ul id="menu">
-                            <a href="http://localhost:3000/login">
+                            <a href="http://localhost:3000/">
                                 <li>Déconnexion</li>
                             </a>
                         </ul>
